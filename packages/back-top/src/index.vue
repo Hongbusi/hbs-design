@@ -31,16 +31,28 @@
 import debounce from 'lodash.debounce';
 
 export default {
-  name: 'BackToTop',
+  name: 'HBackTop',
 
   props: {
-    threshold: {
+    visibilityHeight: {
       type: Number,
-      default: 300
+      default: 400
+    },
+
+    target: [String],
+
+    right: {
+      type: Number,
+      default: 40
+    },
+
+    bottom: {
+      type: Number,
+      default: 40
     }
   },
 
-  data () {
+  data() {
     return {
       scrollTop: null
     }
@@ -48,7 +60,7 @@ export default {
 
   computed: {
     show() {
-      return this.scrollTop > this.threshold;
+      return this.scrollTop > this.visibilityHeight;
     }
   },
 
@@ -61,11 +73,11 @@ export default {
   },
 
   methods: {
-    getScrollTop () {
+    getScrollTop() {
       return window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
     },
 
-    scrollToTop () {
+    scrollToTop() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
       this.scrollTop = 0;
     }
