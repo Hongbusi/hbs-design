@@ -1,7 +1,7 @@
-import Backtop from './back-top';
+import BackTotop from './BackToTop/src';
 
 const components = [
-  Backtop
+  BackTotop
 ];
 
 const install = function(Vue, options) {
@@ -13,5 +13,5 @@ const install = function(Vue, options) {
 export default {
   version: '1.0.0',
   install,
-  Backtop
+  BackTotop
 }

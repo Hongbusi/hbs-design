@@ -31,7 +31,7 @@
 import debounce from 'lodash.debounce';
 
 export default {
-  name: 'HBackTop',
+  name: 'HBackToTop',
 
   props: {
     visibilityHeight: {
