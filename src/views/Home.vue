@@ -1,7 +1,9 @@
 <template>
   <div class="home">
     Home
-    <HBackTop />
+    <h-back-to-top />
+
+    <h-icon icon="hbs-icon-close" />
   </div>
 </template>
 
@@ -11,9 +13,9 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="less">
 .home {
   width: 100%;
-  height: 2000px;
+  height: 100%;
 }
 </style>

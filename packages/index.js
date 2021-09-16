@@ -4,7 +4,8 @@ import Icon from './Icon';
 
 const components = [
   BackTotop,
-  Modal
+  Modal,
+  Icon
 ];
 
 const install = function(Vue, options) {
