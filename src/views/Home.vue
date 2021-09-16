@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     Home
-    <h-back-to-top />
+    <!-- <h-back-to-top /> -->
 
     <h-icon icon="hbs-icon-close" />
 
@@ -15,6 +15,13 @@
     >
       <p>这是模态框的内容！</p>
     </h-modal>
+
+    <div class="js-back-to-top">
+      <div class="back-to-top-container">
+
+      </div>
+      <h-back-to-top target=".js-back-to-top" />
+    </div>
   </div>
 </template>
 
@@ -47,6 +54,19 @@ export default {
 <style lang="less">
 .home {
   width: 100%;
-  height: 100%;
+  height: 2000px;
+}
+
+.js-back-to-top {
+  width: 400px;
+  height: 400px;
+  background-color: pink;
+  overflow-y: auto;
+
+  .back-to-top-container {
+    width: 100%;
+    height: 2000px;
+    background: #fff;
+  }
 }
 </style>

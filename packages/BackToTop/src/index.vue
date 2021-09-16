@@ -1,29 +1,18 @@
 <template>
   <transition name="fade">
-    <svg
-      v-if="show"
-      class="go-to-top"
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 49.484 28.284"
-      @click="scrollToTop"
+    <div
+      v-if="visible"
+      class="hbs-back-to-top"
+      :style="{
+        'right': styleRight,
+        'bottom': styleBottom
+      }"
+      @click.stop="handleClick"
     >
-      <g transform="translate(-229 -126.358)">
-        <rect
-          fill="currentColor"
-          width="35"
-          height="5"
-          rx="2"
-          transform="translate(229 151.107) rotate(-45)"
-        />
-        <rect
-          fill="currentColor"
-          width="35"
-          height="5"
-          rx="2"
-          transform="translate(274.949 154.642) rotate(-135)"
-        />
-      </g>
-    </svg>
+      <slot>
+        <h-icon icon="hbs-icon-top" />
+      </slot>
+    </div>
   </transition>
 </template>
 
@@ -54,55 +43,87 @@ export default {
 
   data() {
     return {
-      scrollTop: null
+      el: null,
+      container: null,
+      visible: false
     }
   },
 
   computed: {
-    show() {
-      return this.scrollTop > this.visibilityHeight;
+    styleRight() {
+      return `${this.right}px`;
+    },
+
+    styleBottom() {
+      return `${this.bottom}px`;
     }
   },
 
   mounted() {
-    this.scrollTop = this.getScrollTop();
+    this.init();
 
-    window.addEventListener('scroll', debounce(() => {
-      this.scrollTop = this.getScrollTop();
-    }, 100));
+    this.getScrollTop();
+
+    this.throttledScrollHandler = debounce(() => {
+      this.getScrollTop();
+    }, 100);
+
+    this.container.addEventListener('scroll', this.throttledScrollHandler);
   },
 
   methods: {
+    init() {
+      this.container = document;
+      this.el = document.documentElement;
+
+      if (this.target) {
+        this.el = document.querySelector(this.target);
+        if (!this.el) {
+          throw new Error(`target is not existed: ${this.target}`);
+        }
+        this.container = this.el;
+      }
+    },
+
     getScrollTop() {
-      return window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+      const scrollTop = this.el.scrollTop;
+      this.visible = scrollTop >= this.visibilityHeight;
+    },
+
+    handleClick(e) {
+      this.scrollToTop();
+      this.$emit('click', e);
     },
 
     scrollToTop() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-      this.scrollTop = 0;
+      this.el.scrollTo({ top: 0, behavior: 'smooth' });
+    },
+
+    beforeDestroy() {
+      this.container.removeEventListener('scroll', this.throttledScrollHandler);
     }
   }
 }
 </script>
 
-<style scoped>
-.go-to-top {
-  cursor: pointer;
+<style lang="less">
+.hbs-back-to-top {
   position: fixed;
-  bottom: 2rem;
-  right: 2.5rem;
-  width: 2rem;
-  color: red;
   z-index: 1;
-}
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background-color: fade(red, 80%);
+  border-radius: 50%;
+  transform: all 0.3 ease;
+  color: green;
 
-.go-to-top:hover {
-  color: lighten(red, 30%);
-}
-
-@media (max-width: 959px) {
-  .go-to-top {
-    display: none;
+  &:hover {
+    background-color: fade(red, 60%);
+    color: yellow;
+    transform: all 0.3 ease;
   }
 }
 
