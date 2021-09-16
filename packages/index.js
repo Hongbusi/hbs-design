@@ -1,11 +1,13 @@
 import BackTotop from './BackToTop';
 import Modal from './Modal';
 import Icon from './Icon';
+import Button from './Button';
 
 const components = [
   BackTotop,
   Modal,
-  Icon
+  Icon,
+  Button
 ];
 
 const install = function(Vue, options) {
@@ -19,5 +21,6 @@ export default {
   install,
   BackTotop,
   Modal,
-  Icon
+  Icon,
+  Button
 }
