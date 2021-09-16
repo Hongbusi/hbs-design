@@ -1,5 +1,6 @@
 <template>
   <button class="hbs-button">
+    default
   </button>
 </template>
 

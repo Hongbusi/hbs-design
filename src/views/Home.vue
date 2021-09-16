@@ -4,6 +4,8 @@
     <h-back-to-top />
 
     <h-icon icon="hbs-icon-close" />
+
+    <h-button />
   </div>
 </template>
 
