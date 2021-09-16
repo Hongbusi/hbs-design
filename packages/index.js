@@ -1,5 +1,6 @@
 import BackTotop from './BackToTop';
 import Modal from './Modal';
+import Icon from './Icon';
 
 const components = [
   BackTotop,
@@ -16,5 +17,6 @@ export default {
   version: '1.0.0',
   install,
   BackTotop,
-  Modal
+  Modal,
+  Icon
 }
