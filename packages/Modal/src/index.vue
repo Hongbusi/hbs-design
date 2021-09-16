@@ -13,8 +13,10 @@
                 <h-icon icon="hbs-icon-close" />
               </span>
             </button>
-            <div class="hbs-modal-header">title</div>
-            <div class="hbs-modal-body">body</div>
+            <div class="hbs-modal-header">{{ title }}</div>
+            <div class="hbs-modal-body">
+              <slot />
+            </div>
             <div class="hbs-modal-footer" v-if="footer">
               <slot name="footer">
                 <h-button @click="handleClickCancel">default</h-button>
@@ -62,8 +64,6 @@ export default {
 </script>
 
 <style lang="less">
-@import '../../styles/mixins/index';
-
 .hbs-modal-mask,
 .hbs-modal-wrapper {
   position: fixed;
@@ -84,8 +84,6 @@ export default {
 }
 
 .hbs-modal {
-  .reset-component;
-
   position: relative;
   top: 100px;
   padding-bottom: 24px;
@@ -134,7 +132,7 @@ export default {
   }
 
   &-header {
-    padding: 16px 24px;
+    padding: 16px 40px 16px 24px;
     margin: 0;
     font-weight: 500;
     font-size: 16px;

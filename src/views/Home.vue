@@ -5,16 +5,15 @@
 
     <h-icon icon="hbs-icon-close" />
 
-    <h-button />
-
-    <button @click="handleClickVisible">show modal</button>
+    <h-button @click="handleClickVisible" />
 
     <h-modal
-      title="这是一个模态框"
+      title="这是模态框的标题"
       :visible="visible"
       @cancel="handleClickCancel"
       @confirm="handleClickConfirm"
     >
+      <p>这是模态框的内容！</p>
     </h-modal>
   </div>
 </template>

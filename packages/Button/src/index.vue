@@ -17,9 +17,5 @@ export default {
 </script>
 
 <style lang="less">
-@import '../../styles/mixins/index';
 
-.hbs-button {
-  .reset-component;
-}
 </style>

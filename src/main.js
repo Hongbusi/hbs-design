@@ -3,6 +3,7 @@ import App from './App.vue';
 import router from './router';
 
 import HbsDesignVue from '../packages';
+import '../packages/styles/reset.less';
 
 Vue.use(HbsDesignVue);
 
