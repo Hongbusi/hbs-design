@@ -6,12 +6,42 @@
     <h-icon icon="hbs-icon-close" />
 
     <h-button />
+
+    <button @click="handleClickVisible">show modal</button>
+
+    <h-modal
+      title="这是一个模态框"
+      :visible="visible"
+      @cancel="handleClickCancel"
+      @confirm="handleClickConfirm"
+    >
+    </h-modal>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Home'
+  name: 'Home',
+
+  data() {
+    return {
+      visible: false
+    }
+  },
+
+  methods: {
+    handleClickVisible() {
+      this.visible = true;
+    },
+
+    handleClickCancel() {
+      this.visible = false;
+    },
+
+    handleClickConfirm() {
+      this.visible = false;
+    }
+  }
 }
 </script>
 
