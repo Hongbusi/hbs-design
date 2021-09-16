@@ -1,7 +1,9 @@
-import BackTotop from './BackToTop/src';
+import BackTotop from './BackToTop';
+import Modal from './Modal';
 
 const components = [
-  BackTotop
+  BackTotop,
+  Modal
 ];
 
 const install = function(Vue, options) {
@@ -13,5 +15,6 @@ const install = function(Vue, options) {
 export default {
   version: '1.0.0',
   install,
-  BackTotop
+  BackTotop,
+  Modal
 }
