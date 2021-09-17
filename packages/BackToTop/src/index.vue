@@ -115,14 +115,13 @@ export default {
   height: 40px;
   line-height: 40px;
   text-align: center;
-  background-color: fade(red, 80%);
+  background-color: #46c37b;
   border-radius: 50%;
   transform: all 0.3 ease;
-  color: green;
+  color: #fff;
 
   &:hover {
-    background-color: fade(red, 60%);
-    color: yellow;
+    background-color: fade(#46c37b, 80%);
     transform: all 0.3 ease;
   }
 }

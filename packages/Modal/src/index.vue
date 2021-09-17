@@ -20,7 +20,7 @@
             <div class="hbs-modal-footer" v-if="footer">
               <slot name="footer">
                 <h-button @click="handleClickCancel">{{ cancalText }}</h-button>
-                <h-button @click="handleClickConfirm">{{ confirmText }}</h-button>
+                <h-button type="primary" @click="handleClickConfirm">{{ confirmText }}</h-button>
               </slot>
             </div>
           </div>

@@ -1,29 +1,17 @@
 <template>
   <div class="home">
-    Home
-    <!-- <h-back-to-top /> -->
-
-    <h-icon icon="hbs-icon-close" />
-
-    <h-button @click="handleClickVisible" />
+    <h-button @click="handleClickVisible">show modal</h-button>
 
     <h-modal
       title="这是模态框的标题"
       :visible="visible"
-      :width="700"
+      :width="520"
       :mask-closable="false"
       @cancel="handleClickCancel"
       @confirm="handleClickConfirm"
     >
       <p>这是模态框的内容！</p>
     </h-modal>
-
-    <div class="js-back-to-top">
-      <div class="back-to-top-container">
-
-      </div>
-      <h-back-to-top target=".js-back-to-top" />
-    </div>
   </div>
 </template>
 
