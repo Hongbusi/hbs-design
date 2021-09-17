@@ -1,14 +1,14 @@
 <template>
   <div>
     <transition name="mask-fade">
-      <div class="hbs-modal-mask" v-show="visible" />
+      <div v-show="visible" class="hbs-modal-mask" />
     </transition>
 
     <transition name="modal-fade">
-      <div class="hbs-modal-wrapper" v-show="visible" @click.self="handleClickCancel('mask')">
+      <div v-show="visible" class="hbs-modal-wrapper" @click.self="handleClickCancel('mask')">
         <div class="hbs-modal" :style="`width: ${width}px;`">
           <div class="hbs-modal-content">
-            <button class="hbs-modal-close" v-if="closable" @click="handleClickCancel">
+            <button v-if="closable" class="hbs-modal-close" @click="handleClickCancel">
               <span class="hbs-modal-close-x">
                 <h-icon icon="hbs-icon-close" />
               </span>
@@ -17,7 +17,7 @@
             <div class="hbs-modal-body">
               <slot />
             </div>
-            <div class="hbs-modal-footer" v-if="footer">
+            <div v-if="footer" class="hbs-modal-footer">
               <slot name="footer">
                 <h-button @click="handleClickCancel">{{ cancalText }}</h-button>
                 <h-button type="primary" @click="handleClickConfirm">{{ confirmText }}</h-button>
