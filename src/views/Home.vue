@@ -12,6 +12,12 @@
     >
       <p>这是模态框的内容！</p>
     </h-modal>
+
+    <h-popover>
+      <template #content>
+        这是气泡卡片的内容。
+      </template>
+    </h-popover>
   </div>
 </template>
 
