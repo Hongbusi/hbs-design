@@ -10,6 +10,8 @@
     <h-modal
       title="这是模态框的标题"
       :visible="visible"
+      :width="700"
+      :mask-closable="false"
       @cancel="handleClickCancel"
       @confirm="handleClickConfirm"
     >

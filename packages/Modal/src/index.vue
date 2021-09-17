@@ -5,10 +5,10 @@
     </transition>
 
     <transition name="modal-fade">
-      <div class="hbs-modal-wrapper" v-show="visible" @click.self="handleClickCancel">
-        <div class="hbs-modal">
+      <div class="hbs-modal-wrapper" v-show="visible" @click.self="handleClickCancel('mask')">
+        <div class="hbs-modal" :style="`width: ${width}px;`">
           <div class="hbs-modal-content">
-            <button class="hbs-modal-close" @click="handleClickCancel">
+            <button class="hbs-modal-close" v-if="closable" @click="handleClickCancel">
               <span class="hbs-modal-close-x">
                 <h-icon icon="hbs-icon-close" />
               </span>
@@ -19,8 +19,8 @@
             </div>
             <div class="hbs-modal-footer" v-if="footer">
               <slot name="footer">
-                <h-button @click="handleClickCancel">default</h-button>
-                <h-button @click="handleClickConfirm">default</h-button>
+                <h-button @click="handleClickCancel">{{ cancalText }}</h-button>
+                <h-button @click="handleClickConfirm">{{ confirmText }}</h-button>
               </slot>
             </div>
           </div>
@@ -35,24 +35,60 @@ export default {
   name: 'HModal',
 
   props: {
+    // 标题
     title: {
       type: String,
       default: ''
     },
 
+    // 对话框是否可见
     visible: {
       type: Boolean,
       default: false
     },
 
+    // 宽度
+    width: {
+      type: [String, Number],
+      default: 520
+    },
+
+    // 当不需要默认底部按钮时，可以设为 :footer="false"
     footer: {
+      type: Boolean,
+      default: true
+    },
+
+    // 取消按钮文字
+    cancalText: {
+      type: String,
+      default: '取消'
+    },
+
+    // 确认按钮文字
+    confirmText: {
+      type: String,
+      default: '确认'
+    },
+
+    // 是否显示右上角的关闭按钮
+    closable: {
+      type: Boolean,
+      default: true
+    },
+
+    // 点击蒙层是否允许关闭
+    maskClosable: {
       type: Boolean,
       default: true
     }
   },
 
   methods: {
-    handleClickCancel() {
+    handleClickCancel(value) {
+      if (value === 'mask' && !this.maskClosable) {
+        return;
+      }
       this.$emit('cancel');
     },
 
@@ -88,7 +124,6 @@ export default {
   top: 100px;
   padding-bottom: 24px;
   margin: 0 auto;
-  width: 500px;
 
   &-content {
     position: relative;
