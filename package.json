@@ -11,7 +11,11 @@
     "component library",
     "ui framework",
     "ui",
-    "vue"
+    "vue",
+    "vue3"
+  ],
+  "files": [
+    "dist"
   ],
   "author": "Hongbusi",
   "license": "MIT",
