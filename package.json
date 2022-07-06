@@ -4,7 +4,7 @@
   "description": "A component library for Vue 3.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Hongbusi/vue-components.git"
+    "url": "git+https://github.com/Hongbusi/hbs-design.git"
   },
   "keywords": [
     "hbs-design",
@@ -20,7 +20,7 @@
   "author": "Hongbusi",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Hongbusi/vue-components/issues"
+    "url": "https://github.com/Hongbusi/hbs-design/issues"
   },
-  "homepage": "https://github.com/Hongbusi/vue-components#readme"
+  "homepage": "https://github.com/Hongbusi/hbs-design#readme"
 }
