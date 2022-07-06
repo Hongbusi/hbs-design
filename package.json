@@ -27,6 +27,9 @@
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
+    "dev:docs": "vitepress dev",
+    "build:docs": "vitepress build",
+    "serve:docs": "vitepress serve",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "prepare": "husky install"
@@ -45,6 +48,8 @@
     "lint-staged": "^13.0.3",
     "typescript": "^4.5.4",
     "vite": "^2.9.9",
+    "vitepress": "1.0.0-alpha.4",
+    "vitepress-theme-demoblock": "^1.4.2",
     "vue-tsc": "^0.34.7"
   },
   "lint-staged": {
