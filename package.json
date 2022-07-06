@@ -2,9 +2,15 @@
   "name": "hbs-design",
   "version": "1.0.0",
   "description": "A component library for Vue 3.",
+  "author": "Hongbusi",
+  "license": "MIT",
+  "homepage": "https://github.com/Hongbusi/hbs-design#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Hongbusi/hbs-design.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Hongbusi/hbs-design/issues"
   },
   "keywords": [
     "hbs-design",
@@ -17,10 +23,20 @@
   "files": [
     "dist"
   ],
-  "author": "Hongbusi",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Hongbusi/hbs-design/issues"
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "prepare": "husky install"
   },
-  "homepage": "https://github.com/Hongbusi/hbs-design#readme"
+  "devDependencies": {
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
+    "@hongbusi/eslint-config": "^0.3.2",
+    "eslint": "^8.19.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3"
+  },
+  "lint-staged": {
+    "*.{vue,js,jsx,ts,tsx,json,md}": "eslint --fix"
+  }
 }
