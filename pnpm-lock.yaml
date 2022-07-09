@@ -3,7 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@commitlint/cli': ^17.0.3
   '@commitlint/config-conventional': ^17.0.3
-  '@hongbusi/eslint-config': ^0.3.2
+  '@hongbusi/eslint-config': 0.3.4
   '@unocss/reset': ^0.43.2
   '@vitejs/plugin-vue': ^2.3.3
   '@vitejs/plugin-vue-jsx': ^1.3.10
@@ -25,7 +25,7 @@ dependencies:
 devDependencies:
   '@commitlint/cli': 17.0.3
   '@commitlint/config-conventional': 17.0.3
-  '@hongbusi/eslint-config': 0.3.2_4x5o4skxv6sl53vpwefgt23khm
+  '@hongbusi/eslint-config': 0.3.4_4x5o4skxv6sl53vpwefgt23khm
   '@vitejs/plugin-vue': 2.3.3_vite@2.9.13+vue@3.2.37
   '@vitejs/plugin-vue-jsx': 1.3.10
   eslint: 8.19.0
@@ -707,14 +707,14 @@ packages:
     resolution: {integrity: sha512-bprfNmYt1opFUFEtD2XfY/kEsm13bzHQgU80uMjhuK0DJ914IjolT1GytpkdM6tJ4MBvyiJPP+bTtWO+BZ7c7w==}
     dev: true
 
-  /@hongbusi/eslint-config-basic/0.3.2_6zdoc3rn4mpiddqwhppni2mnnm:
-    resolution: {integrity: sha512-cYNQ6IOGY01uWnFIDc+pSCxQTCMhNL0QM4Z+LSXD6D5saBWNGoSPFQUI941iuOYbaCLuWobFs28eZwoYZgfdsg==}
+  /@hongbusi/eslint-config-basic/0.3.4_6zdoc3rn4mpiddqwhppni2mnnm:
+    resolution: {integrity: sha512-ed9nWTBsqAzVq7vXPjVXN0SgRmB1IGMbLh3tYMUR2euKmwW4y+D1zeEHGP7Jj0SlrQgONTQeiCxmeOgpi7Ie7A==}
     peerDependencies:
       eslint: '>=7.4.0'
     dependencies:
       eslint: 8.19.0
       eslint-plugin-eslint-comments: 3.2.0_eslint@8.19.0
-      eslint-plugin-hongbusi: 0.3.2_4x5o4skxv6sl53vpwefgt23khm
+      eslint-plugin-hongbusi: 0.3.4_4x5o4skxv6sl53vpwefgt23khm
       eslint-plugin-html: 6.2.0
       eslint-plugin-import: 2.26.0_iom7pm3yknyiblqpw2vvqvxs5i
       eslint-plugin-jsonc: 2.3.1_eslint@8.19.0
@@ -733,12 +733,12 @@ packages:
       - typescript
     dev: true
 
-  /@hongbusi/eslint-config-react/0.3.2_4x5o4skxv6sl53vpwefgt23khm:
-    resolution: {integrity: sha512-bPbDnktZtTqnDMgwTvyF+Xc4c6eoDqWZSQdxgTZOX6FoGTNBXlgOjKMNXV0DMMwWRzDx+KzMGdPsiDA6mir1xQ==}
+  /@hongbusi/eslint-config-react/0.3.4_4x5o4skxv6sl53vpwefgt23khm:
+    resolution: {integrity: sha512-vh8Z3NRnEZbVAW51Eo4eVRtqz+PdOFqTCogILB5+OnnlRYzVzw3IPHXoZJn8KuPXRFw3r1Pwmqyvn+MJPkjrhQ==}
     peerDependencies:
       eslint: '>=7.4.0'
     dependencies:
-      '@hongbusi/eslint-config-ts': 0.3.2_4x5o4skxv6sl53vpwefgt23khm
+      '@hongbusi/eslint-config-ts': 0.3.4_4x5o4skxv6sl53vpwefgt23khm
       eslint: 8.19.0
       eslint-plugin-react: 7.30.1_eslint@8.19.0
     transitivePeerDependencies:
@@ -748,13 +748,13 @@ packages:
       - typescript
     dev: true
 
-  /@hongbusi/eslint-config-ts/0.3.2_4x5o4skxv6sl53vpwefgt23khm:
-    resolution: {integrity: sha512-e5JsSXd+c9WZ3aUGQyswVrFjeqiz8zO4b6x7PMrUaHuxuZ35aTcJoWSz1YrCZ5STh2CJ0dbYL0i53BWxZECURw==}
+  /@hongbusi/eslint-config-ts/0.3.4_4x5o4skxv6sl53vpwefgt23khm:
+    resolution: {integrity: sha512-x2CDAjIWkDzyNMJNzx4V8YQjEX9pQaE2yANhJSUFwFMamQJ5flM45QAq8MNz1ZmdA7+pzoG4KpJIXl9CqzWqqQ==}
     peerDependencies:
       eslint: '>=7.4.0'
       typescript: '>=3.9'
     dependencies:
-      '@hongbusi/eslint-config-basic': 0.3.2_6zdoc3rn4mpiddqwhppni2mnnm
+      '@hongbusi/eslint-config-basic': 0.3.4_6zdoc3rn4mpiddqwhppni2mnnm
       '@typescript-eslint/eslint-plugin': 5.30.5_6zdoc3rn4mpiddqwhppni2mnnm
       '@typescript-eslint/parser': 5.30.5_4x5o4skxv6sl53vpwefgt23khm
       eslint: 8.19.0
@@ -765,12 +765,12 @@ packages:
       - supports-color
     dev: true
 
-  /@hongbusi/eslint-config-vue/0.3.2_4x5o4skxv6sl53vpwefgt23khm:
-    resolution: {integrity: sha512-q2XjeLdTw+bUXICZ0lbQrz/BTkpt1N+REHcJTScYxUyXoO/BH3dQ9+92C3uUOGoICS6MmeHMpag4Eno37WyAXg==}
+  /@hongbusi/eslint-config-vue/0.3.4_4x5o4skxv6sl53vpwefgt23khm:
+    resolution: {integrity: sha512-1Arb7nUgd4povjEnqVhNuah+F+KRvUOt5ucGhNdW/qTocdjYVb3Ir2N0HHw+l4tObB/2yj48ib1kjp4vE0W0xQ==}
     peerDependencies:
       eslint: '>=7.4.0'
     dependencies:
-      '@hongbusi/eslint-config-ts': 0.3.2_4x5o4skxv6sl53vpwefgt23khm
+      '@hongbusi/eslint-config-ts': 0.3.4_4x5o4skxv6sl53vpwefgt23khm
       eslint: 8.19.0
       eslint-plugin-vue: 9.2.0_eslint@8.19.0
     transitivePeerDependencies:
@@ -780,13 +780,13 @@ packages:
       - typescript
     dev: true
 
-  /@hongbusi/eslint-config/0.3.2_4x5o4skxv6sl53vpwefgt23khm:
-    resolution: {integrity: sha512-doSyZqLE2xcwQcrQYg7IBSpSuw/HL9gf7Ol5yB0DnFZRUTWVFnSLraXYbEKXDvvi7RcsA8WKNmTPa4hpO0SLeA==}
+  /@hongbusi/eslint-config/0.3.4_4x5o4skxv6sl53vpwefgt23khm:
+    resolution: {integrity: sha512-Tu625ehXQz3G1U4w3hT5CWcT0kEFesXDAgtCXY3NFm1ckUmPFgpX6/NdTXNjVkeU2KzNgtarlEC0d6AG8ySMug==}
     peerDependencies:
       eslint: '>=7.4.0'
     dependencies:
-      '@hongbusi/eslint-config-react': 0.3.2_4x5o4skxv6sl53vpwefgt23khm
-      '@hongbusi/eslint-config-vue': 0.3.2_4x5o4skxv6sl53vpwefgt23khm
+      '@hongbusi/eslint-config-react': 0.3.4_4x5o4skxv6sl53vpwefgt23khm
+      '@hongbusi/eslint-config-vue': 0.3.4_4x5o4skxv6sl53vpwefgt23khm
       '@typescript-eslint/eslint-plugin': 5.30.5_6zdoc3rn4mpiddqwhppni2mnnm
       '@typescript-eslint/parser': 5.30.5_4x5o4skxv6sl53vpwefgt23khm
       eslint: 8.19.0
@@ -2517,8 +2517,8 @@ packages:
       ignore: 5.2.0
     dev: true
 
-  /eslint-plugin-hongbusi/0.3.2_4x5o4skxv6sl53vpwefgt23khm:
-    resolution: {integrity: sha512-IZ9beDSdDRnavNp1fkvNow3d4OEPB7YmNprMSTmmgJLJ75cv1IoUiDk6A8pYTg5PGX8hl3FWyE/5CnENbfw05g==}
+  /eslint-plugin-hongbusi/0.3.4_4x5o4skxv6sl53vpwefgt23khm:
+    resolution: {integrity: sha512-SGxEYIDw3cjgAIs1yr0qfAme9Q7YK7U5VoxhX8FXXKvNBUVk7KVmZK+AviURj53tSTO0NKifg0pc/+3B09/0AQ==}
     dependencies:
       '@typescript-eslint/utils': 5.30.5_4x5o4skxv6sl53vpwefgt23khm
     transitivePeerDependencies:
