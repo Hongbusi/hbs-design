@@ -30,6 +30,7 @@
     "dev:docs": "vitepress dev",
     "build:docs": "vitepress build",
     "serve:docs": "vitepress serve",
+    "build:components": "node ./scripts/build.js",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "prepare": "husky install"
@@ -45,6 +46,7 @@
     "@vitejs/plugin-vue": "^2.3.3",
     "@vitejs/plugin-vue-jsx": "^1.3.10",
     "eslint": "^8.19.0",
+    "fs-extra": "^10.1.0",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
     "typescript": "^4.5.4",
