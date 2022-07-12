@@ -58,11 +58,6 @@ const createPackageJson = (name) => {
   ]
 }`
 
-  fse.outputFile(resolve(outputDir, 'package.json'),
-    fileStr,
-    'utf-8'
-  )
-
   const targetDir = name ? `${name}/package.json` : 'package.json'
   fse.outputFile(resolve(outputDir, targetDir), fileStr, 'utf-8')
 }
