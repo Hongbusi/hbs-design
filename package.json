@@ -1,28 +1,5 @@
 {
-  "name": "hbs-design",
-  "version": "1.0.0",
-  "description": "A component library for Vue 3.",
-  "author": "Hongbusi",
-  "license": "MIT",
-  "homepage": "https://github.com/Hongbusi/hbs-design#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Hongbusi/hbs-design.git"
-  },
-  "bugs": {
-    "url": "https://github.com/Hongbusi/hbs-design/issues"
-  },
-  "keywords": [
-    "hbs-design",
-    "component library",
-    "ui framework",
-    "ui",
-    "vue",
-    "vue3"
-  ],
-  "files": [
-    "dist"
-  ],
+  "private": "true",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
